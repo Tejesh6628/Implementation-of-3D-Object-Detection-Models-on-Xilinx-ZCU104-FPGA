@@ -85,3 +85,7 @@ dump_results/
 ZYNQ/compiled_qat_1/
 complex_yolov4/compiled_qat/*.xmodel
 
+# Internal draft presentations
+5th prsg.pptx
+
+
