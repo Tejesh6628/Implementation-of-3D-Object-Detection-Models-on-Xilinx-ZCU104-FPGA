@@ -1,0 +1,87 @@
+# ==============================================================================
+# Git Ignore Configuration
+# Implementation of 3D Object Detection Models on Xilinx ZCU104 FPGA
+# ==============================================================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.dylib
+*.dll
+
+# C/C++ build artifacts & HLS
+*.o
+*.obj
+*.out
+*.app
+.project
+.cproject
+
+# Environments & Packages
+.env
+.venv
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# IDEs & System files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+
+# Large Checkpoints (>100MB blocked by GitHub)
+# Download pre-trained weights from external release / Drive as documented in README
+*.pth
+*.pt
+*.onnx_data
+!second_model/checkpoints/checkpoint_epoch_80.pth
+
+# Massive repetitive calibration numpy dumps & datasets (>1GB total)
+# (Sample test data for inference is included in ZYNQ/velodyne_test/)
+complex_yolov4/calibration_data/
+complex_yolov4/calibration_data_1/
+complex_yolov4/calibration_data_200/
+complex_yolov4/bev_images/
+complex_yolov4/bev_images_test/
+complex_yolov4/velodyne/training_set/
+complex_yolov4/velodyne/testing_set/
+second_model/calib_data_real/
+second_model/calib_data_test/
+
+# Vitis AI temporary dump logs and profiling traces
+*.log
+quantize_result/
+dump_results/
+*.wdb
+*.wcfg
+
+# Redundant duplicate compilation build
+ZYNQ/compiled_qat_1/
+complex_yolov4/compiled_qat/*.xmodel
+

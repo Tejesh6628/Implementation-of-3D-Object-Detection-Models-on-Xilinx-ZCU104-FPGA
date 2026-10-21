@@ -1,0 +1,8 @@
+{
+    "lib": "libvart-dpu-runner.so",
+    "filename": "complex_yolov4.xmodel",
+    "kernel": [
+        "subgraph_DarknetBackbone__DarknetBackbone_MaxPool2d_net__ModuleList_models__ModuleList_108__13512_fix"
+    ],
+    "target": "DPUCZDX8G_ISA1_B4096"
+}
