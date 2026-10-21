@@ -7,17 +7,7 @@
 [![Power](https://img.shields.io/badge/Board%20Power-~15%20Watts-yellow.svg)](#hardware-utilization--system-metrics)
 [![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg)](LICENSE)
 
----
 
-### **Academic Information**
-* **Project Title:** Implementation of 3D Object Detection Models on Xilinx ZCU104 FPGA
-* **Author:** **Tatikonda Tejesh** (Roll No.: `2023BEE-035`)
-* **Under the Guidance of:** **Prof. Manisha Pattanaik**
-* **Department:** Department of Electrical and Electronics Engineering
-* **Institution:** ABV – Indian Institute of Information Technology and Management, Gwalior (IIITM Gwalior)
-* **Colloquium / Evaluation:** Summer Colloquium & 5th PRSG Evaluation (Academic Year 2025–2026)
-
----
 
 ## 📖 Executive Summary & Motivation
 
@@ -335,50 +325,9 @@ python3 run_second.py \
     --score_thresh 0.3
 ```
 
----
 
-## 🔮 Future Work: The Custom AI Accelerator Roadmap
 
-The completed DPU baseline deployment establishes a rigorous, quantitative baseline that exposes the fundamental limitations of generic commercial deep learning processors:
 
-```
-+--------------------------------------------------------------------------------------------------+
-|                              TWO-PHASE RESEARCH METHODOLOGY                                      |
-+--------------------------------------------------------------------------------------------------+
-|                                                                                                  |
-|   PHASE 1 (COMPLETED): Commercial Baseline & Bottleneck Isolation                                |
-|   ├── Deployed Complex-YOLOv4 and SECOND on standard Xilinx DPU (ZCU104)                        |
-|   ├── Profiled ~15W power envelope, latency, RAM, and INT8 quantization trade-offs              |
-|   └── Identified key bottlenecks: DPU "Dark Silicon" overhead & ARM CPU decoding stalls          |
-|                                                                                                  |
-|                                        │                                                         |
-|                                        ▼                                                         |
-|   PHASE 2 (CURRENT & FUTURE): 100% Custom Application-Specific Accelerator                       |
-|   ├── Application-Specific Architecture: Strip away generic DPU instruction schedulers and       |
-|   │   unused gates to eliminate idle leakage power ("Dark Silicon").                             |
-|   ├── Vitis HLS High-Level Synthesis: Perform rapid Design Space Exploration (DSE) via C++       |
-|   │   pragmas (pipelining, memory array partitioning, and loop unrolling).                       |
-|   ├── Native Decode Acceleration: Integrate complex yaw angle reconstruction and NMS natively    |
-|   │   into custom hardware logic, entirely severing reliance on the ARM CPU.                     |
-|   ├── Custom 3D Sparse Engine: Design a dedicated coordinate-hash accelerator for sparse ops.   |
-|   └── ASIC Implementation: Target silicon fabrication at the SCL 180nm semiconductor node.       |
-|                                                                                                  |
-+--------------------------------------------------------------------------------------------------+
-```
-
----
-
-## 📚 Key References & Standards
-
-1. **VoxelNet:** Y. Zhou and O. Tuzel, *"VoxelNet: End-to-End Learning for Point Cloud Based 3D Object Detection,"* IEEE/CVF CVPR, 2018.
-2. **SECOND:** Y. Yan, Y. Mao, and B. Li, *"SECOND: Sparsely Embedded Convolutional Detection,"* Sensors, vol. 18, no. 10, p. 3337, 2018.
-3. **Complex-YOLO:** M. Simon, S. Milz, K. Amende, and H.-M. Gross, *"Complex-YOLO: An Euler-Region-Proposal for Real-Time 3D Object Detection on Point Clouds,"* ECCV Workshops, 2018.
-4. **PointPillars:** A. H. Lang, S. Vora, H. Caesar, L. Zhou, J. Yang, and O. Beijbom, *"PointPillars: Fast Encoders for Object Detection from Point Clouds,"* IEEE/CVF CVPR, 2019.
-5. **YOLOv4:** A. Bochkovskiy, C.-Y. Wang, and H.-Y. M. Liao, *"YOLOv4: Optimal Speed and Accuracy of Object Detection,"* arXiv:2004.10934, 2020.
-6. **OpenPCDet:** OpenPCDet Development Team, *"OpenPCDet: An Open-source Toolbox for 3D Object Detection from Point Clouds,"* 2020.
-7. **KITTI Dataset:** A. Geiger, P. Lenz, and R. Urtasun, *"Are we ready for Autonomous Driving? The KITTI Vision Benchmark Suite,"* IEEE CVPR, 2012.
-8. **AMD/Xilinx DPU Product Guide:** AMD/Xilinx, *"DPUCZDX8G for Zynq UltraScale+ MPSoCs Product Guide (PG338),"* v4.1, 2023.
-9. **AMD/Xilinx Vitis AI User Guide:** AMD/Xilinx, *"Vitis AI User Guide (UG1414),"* v3.5, 2023.
 
 ---
 
